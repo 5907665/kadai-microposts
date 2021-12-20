@@ -37,6 +37,13 @@ def show
     @pagy, @followers = pagy(@user.followers)
     counts(@user)
   end
+  
+   def likes
+    @user = User.find(params[:id])
+    @pagy,@favmicroposts = pagy(@user,favmicroposts)
+    counts(@user)
+  end
+
 
   private
 
