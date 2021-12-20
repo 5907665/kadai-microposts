@@ -40,7 +40,7 @@ def show
   
    def likes
     @user = User.find(params[:id])
-    @pagy,@favmicroposts = pagy(@user,favmicroposts)
+    @pagy,@favmicroposts = pagy(@user.favmicroposts)
     counts(@user)
   end
 
